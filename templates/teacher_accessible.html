@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .box-container {
+            margin-top: 50px;
+        }
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: #3498db; /* Blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            margin-bottom: 20px; /* Add margin between boxes */
+        }
+        .box:hover {
+            background-color: #2980b9; /* Darker Blue */
+        }
+        .box.show-students {
+            background-color: #27ae60; /* Green */
+        }
+        .box.show-students:hover {
+            background-color: #219d49; /* Darker Green */
+        }
+        .box.show-parents {
+            background-color: #e74c3c; /* Red */
+        }
+        .box.show-parents:hover {
+            background-color: #c0392b; /* Darker Red */
+        }
+
+        h1{position: relative
+    ;
+left: 30px;}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Dashboard</h1>
+        <div class="box-container">
+            <a href="/show_score" class="box">Show Score</a>
+            <a href="/show_students" class="box show-students">Show Students</a>
+            <a href="/show_parents" class="box show-parents">Show Parents</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Here teachers can access all information</h1>
+    </div>
+</body>
+</html>

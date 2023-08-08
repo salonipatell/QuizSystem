@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555555;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 5px 0;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Python Quiz</h1>
+        <hr>
+        
+        <form action="/submit_quiz" method="post">
+            {% for question in questions %}
+            <div class="question">
+                {{ question.question_text }}
+            </div>
+            <ul class="options">
+                <li><input type="radio" name="question{{ question.id }}" value="{{ question.option1 }}"> {{ question.option1 }}</li>
+                <li><input type="radio" name="question{{ question.id }}" value="{{ question.option2 }}"> {{ question.option2 }}</li>
+                <li><input type="radio" name="question{{ question.id }}" value="{{ question.option3 }}"> {{ question.option3 }}</li>
+                <li><input type="radio" name="question{{ question.id }}" value="{{ question.option4 }}"> {{ question.option4 }}</li>
+            </ul>
+            {% endfor %}
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

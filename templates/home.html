@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add this CSS code to your existing <style> block */
+
+.option-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.option-box {
+    display: block;
+    width: 150px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.option-box:hover {
+    background-color: #2980b9;
+}
+
+.teacher-box {
+    background-color: #e74c3c;
+}
+
+.teacher-box:hover {
+    background-color: #c0392b;
+}
+
+.student-box {
+    background-color: #2ecc71;
+}
+
+.student-box:hover {
+    background-color: #27ae60;
+}
+
+        .navbar {
+            background-color: #040405;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 30px;
+            font-style: italic;
+        }
+        .navbar-links {
+            list-style: none;
+            display: flex;
+        }
+        .navbar-links li {
+            margin: 0 10px;
+        }
+
+        .navbar-links li a{color: white;
+          text-decoration: none;
+          
+            
+        }
+        .navbar-links li a:hover{color: blue;
+        text-decoration: underline;}
+        
+
+        .signup-logo {
+            display: block;
+            margin: 50px auto;
+        }
+        .welcome {
+            text-align: center;
+            font-size: 40px;
+        }
+        .connect {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            Online Quiz
+        </div>
+        <ul class="navbar-links">
+            
+            <li><a href="/register_teacher">TeacherRegistration</a></li>
+            <li><a href="/register_student">StudentRegistration</a></li>
+            <li><a href="/register_parents">ParentsRegistration</a></li>
+          
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </div>
+    
+
+    <div class="welcome">
+        <h1><span style="font-weight: bold;">Let's Quiz</span></h1>
+        <p>Test your skills and become a master</p>
+    </div>
+
+    <div class="option-boxes">
+        <a href="/teacher_login" class="option-box teacher-box">Teacher</a>
+        <a href="/register_student" class="option-box student-box">Student</a>
+    </div>
+
+   
+</body>
+</html>

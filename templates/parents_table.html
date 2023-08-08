@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Parents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parents Information</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Parent Name</th>
+            <th>Mobile No</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Child_Id</th>
+        </tr>
+        {% for parent in parents %}
+        <tr>
+            <td>{{ parent.id }}</td>
+            <td>{{ parent.parentname }}</td>
+            <td>{{ parent.mobileno }}</td>
+            <td>{{ parent.email }}</td>
+            <td>{{ parent.address }}</td>
+            <td>{{ parent.student_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

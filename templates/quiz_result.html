@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .result-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            position: relative;
+    left: 12px;
+    top: 145px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .score {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555555;
+        }
+        .user-name {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #555555;
+        }
+        .answer-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .answer-list li {
+            margin: 5px 0;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Quiz Result</h1>
+        
+        <p class="user-name">Hello {{ user_name }}!</p>
+        
+        <p class="score">Your Score: {{ score }} / 10</p>
+        
+       
+        </ul>
+    </div>
+</body>
+</html>
